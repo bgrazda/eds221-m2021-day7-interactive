@@ -1,0 +1,15 @@
+---
+title: "EDS 221: Day 7 Interactive Sesh"
+format: html
+editor: visual
+---
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+library(lubridate)
+```
+```{r}
+
+```
+
+
