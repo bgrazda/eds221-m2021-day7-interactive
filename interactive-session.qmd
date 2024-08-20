@@ -9,7 +9,17 @@ library(palmerpenguins)
 library(lubridate)
 ```
 ```{r}
+penguins_practice1 <- penguins |> 
+  filter(island %in% c("Biscoe", "Dream")) |> 
+  select(!sex, !year) |> 
+  mutate(body_mass_kg = body_mass_g /1000) |> 
+  rename("location" = island)
 
+penguins_practice2 <- penguins |> 
+  filter(species == "Adelie") |> 
+  filter(!is.na(flipper_length_mm)) |> 
+  group_by(sex) |> 
+  summarise("mean_flipper_length_mm" = mean(flipper_length_mm), "std_flipper_length_mm" = sd(flipper_length_mm), "count" = n())
 ```
 
 
